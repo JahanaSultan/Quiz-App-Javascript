@@ -47,7 +47,7 @@ game_levels.map(e=>{
 button.addEventListener("click",()=>{
     username=input.value
     if(level=="" || username==""){
-        alert("Please input your and and choose difficulty")
+        alert("Please input your name and choose difficulty")
     }
     else{
         display_loading()
