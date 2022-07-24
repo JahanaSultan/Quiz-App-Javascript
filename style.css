@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Cormorant SC", serif;
+}
+
+img {
+  width: 150px;
+}
+.padding-x {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.loading,
+.main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #633e66;
+  z-index: 100;
+}
+
+.enterance {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.enterance h1{
+  font-size: 75px;
+  color: #fff;
+  color: rgb(255, 251, 0);
+}
+.enterance input {
+  width: 200px;
+  height: 30px;
+  background-color: #633e66;
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  margin: 50px 0;
+  font-size: 25px;
+  text-align: center;
+}
+::placeholder {
+  font-size: 16px;
+  color: white;
+  opacity: 0.2;
+}
+.boxes ul {
+  display: flex;
+}
+.boxes ul li {
+  padding: 20px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  margin: 0 15px 50px 5px;
+  color: #633e66;
+  background-color: #6aff00;
+  font-size: 20px;
+  border-radius: 0 15px;
+  transition: 0.1s;
+  border: 1px solid #6aff00;
+  cursor: pointer;
+}
+.boxes ul li:hover {
+  background-color: transparent;
+  color: #6aff00;
+}
+button {
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid yellow;
+  color: yellow;
+  font-size: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+button:hover {
+  border: 1px solid #6aff00;
+  color: #6aff00;
+}
+.active {
+  background-color: transparent !important;
+  color: #6aff00 !important;
+}
+/* .main {
+  display: none;
+} */
+.quiz-main{
+  background-color: #633e66;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+.quiz {
+  width: 50%;
+  padding: 40px 20px 25px 20px;
+  height: 50%;
+  border-radius: 20px;
+  background-color: yellowgreen;
+  /* box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px; */
+  background: rgb(239, 240, 237);
+  backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.726);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.quiz :is(h4, ol li) {
+  font-family: "Montserrat";
+}
+.quiz h4 {
+  font-size: 20px;
+}
+
+.circle1{
+  width: 150px;
+  height: 150px;
+  background-color: #6aff00;
+  border-radius: 50%;
+  position: absolute;
+  top: 60%;
+  left: 20%;
+box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.139) 0px 0px 0px 1px;
+}
+.circle2{
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  right: 20%;
+box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.134) 0px 0px 0px 1px;
+  z-index: 0;
+}
+ol{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 4%;
+  margin-top: 40px;
+}
+ol li{
+  width: 48%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(91, 5, 91);
+  margin-bottom: 15px;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  cursor: pointer;
+}
+.count{
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 139);
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  top: 15%;
+  left: 18%;
+}
+/* .quiz:not(:first-of-type){
+  display: none;
+} */
+
+.quiz button{
+  background-color: orange;
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  color: #fff;
+  border: 0;
+  margin-left: 33%;
+}
+
+.quiz-main{
+  display: none;
+}
+.end{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #633e66;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  background-size: 80px 80px;
+ 
+}
+.end .box{
+  width: 50%;
+  height: 50%;
+  background-color: rgba(240, 248, 255, 0.666);
+  backdrop-filter: blur(25px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.661);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.end .box h1{
+/* margin: 10px 0; */
+color: blueviolet;
+font-size: 35px
+}
+
+.end .box h1 span{
+  color: red;
+  font-weight: 900;
+  margin-left: 5px
+}
+
+.end button{
+  width: 150px;
+  height: 40px;
+  background-color: blueviolet;
+  color: #fff;
+  border: 1px solid blueviolet;
+  border-radius:5px;
+  margin-top: 20px;
+}
+.end p:first-of-type{
+  font-size: 25px;
+  color:rgb(91, 5, 91);
+  text-decoration:double underline green;
+  padding-bottom: 20px;
+}
+.end p:last-of-type{
+color: red;
+font-size: 18px;
+}
+
+.quiz-main h1{
+  color: yellow;
+  font-size: 75px;
+
+}
+@media screen and (max-width:926px) {
+  .quiz-main h1{
+    font-size: 40px;
+    margin-top: 25px;
+  }
+  .boxes ul {
+    flex-direction: column;
+  }
+  .boxes ul li{
+    margin: 5px;
+    padding: 10px;
+  }
+  .main button{
+    margin-top: 25px;
+  }
+  input{
+    margin: 25px!important;
+  }
+  .enterance h1{
+    font-size: 60px;
+  }
+  .quiz{
+    width: 90%;
+    height: 60%;
+  }
+  .end .box{
+    width: 90%;
+    height: 400px;
+  }
+  .circle1{
+    top: 0;
+    left: 0;
+  }
+  .circle2{
+    top: 75%;
+    right: 0;
+  }
+  .count{
+    left: 0;
+    top: 75%;
+
+  }
+}
+
+@media screen and (max-width:600px) {
+  .quiz{
+    height: 85%;
+  }
+  .quiz ol {
+   flex-direction: column;
+  }
+  .quiz ol li{
+    width: 100%;
+  }
+.quiz-main h1{
+  font-size: 30px;
+  margin: 0;
+}
+}

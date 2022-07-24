@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>QuizLand</title>
+  </head>
+
+  <body>
+    <div class="loading"><img src="./img/loading.gif" alt="loading" /></div>
+    <div class="main padding-x">
+      <div class="enterance">
+        <h1>QuizLand</h1>
+        <input type="text" placeholder="Your Name..." />
+        <div class="boxes">
+          <ul>
+            <li>Easy</li>
+            <li>Medium</li>
+            <li>Hard</li>
+          </ul>
+        </div>
+        <button class="button-59">Start Quiz</button>
+      </div>
+    </div>
+    <div class="quiz-main">
+      <div class="quiz">
+        <h4></h4>
+        <ol></ol>
+        <button id="next" onclick="next_question()">next</button>
+      </div>
+      <div class="count"><h1></h1></div>
+      <div class="circle2"></div>
+      <div class="circle1"></div>
+      <h1>QuizLand</h1>
+    </div>
+
+    <div class="end">
+      <div class="box">
+        <p></p>
+        <p id="best"></p>
+        <h1></h1>
+        <h1></h1>
+        <h1></h1>
+        <button onclick="again()">Start Again</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
