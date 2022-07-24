@@ -20,7 +20,7 @@ img {
 }
 
 .loading,
-.main {
+.main, .quiz-main, .end {
   position: fixed;
   top: 0;
   left: 0;
@@ -30,9 +30,10 @@ img {
   align-items: center;
   justify-content: center;
   background-color: #633e66;
-  z-index: 100;
 }
-
+.loading{
+  display: none;
+  z-index: 10000;}
 .enterance {
   width: 30%;
   height: 80%;
@@ -102,26 +103,14 @@ button:hover {
   background-color: transparent !important;
   color: #6aff00 !important;
 }
-/* .main {
-  display: none;
-} */
-.quiz-main{
-  background-color: #633e66;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  display: none;
-}
+
 .quiz {
   width: 50%;
   padding: 40px 20px 25px 20px;
   height: 50%;
   border-radius: 20px;
   background-color: yellowgreen;
-  /* box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px; */
   background: rgb(239, 240, 237);
-  backdrop-filter: blur(1px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.726);
   position: absolute;
@@ -195,9 +184,6 @@ ol li{
   top: 15%;
   left: 18%;
 }
-/* .quiz:not(:first-of-type){
-  display: none;
-} */
 
 .quiz button{
   background-color: orange;
@@ -212,20 +198,9 @@ ol li{
 .quiz-main{
   display: none;
 }
-.end{
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #633e66;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: none;
-  background-size: 80px 80px;
- 
-}
+.end{display: none;
+background-size: 100px 100px;}
+
 .end .box{
   width: 50%;
   height: 50%;
@@ -240,7 +215,6 @@ ol li{
 }
 
 .end .box h1{
-/* margin: 10px 0; */
 color: blueviolet;
 font-size: 35px
 }
@@ -274,7 +248,8 @@ font-size: 18px;
 .quiz-main h1{
   color: yellow;
   font-size: 75px;
-
+  position: absolute;
+  top: 0;
 }
 @media screen and (max-width:926px) {
   .quiz-main h1{
